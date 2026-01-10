@@ -1,14 +1,20 @@
 
 package com.example.duoclone.config;
 
+
 import com.example.duoclone.model.Course;
 import com.example.duoclone.repository.CourseRepository;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
+import org.springframework.data.mongodb.core.MongoTemplate;
+import org.springframework.data.mongodb.core.query.Criteria;
+import org.springframework.data.mongodb.core.query.Query;
+import org.springframework.data.mongodb.core.query.Update;
 
 import java.util.List;
+
 
 @Configuration
 public class DataInitializerConfig {
@@ -56,5 +62,23 @@ public class DataInitializerConfig {
                 System.out.println("ℹ️ Courses already present, skipping seeding.");
             }
         };
+    }
+    
+   // ✅ 2. Backfill completed=false for old documents
+    @Bean
+    @Profile("dev")
+    public ApplicationRunner backfillCompleted(MongoTemplate mongoTemplate) {
+        return args -> {
+            Query query = new Query(
+                Criteria.where("completed").exists(false)
+            );
+            Update update = new Update().set("completed", false);
+
+            var result = mongoTemplate.updateMulti(query, update, Course.class);
+            System.out.println(
+                "✅ Backfilled 'completed=false' on " + result.getModifiedCount() + " course(s)."
+            );
+        };
+    
     }
 }

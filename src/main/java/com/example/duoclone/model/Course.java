@@ -18,6 +18,11 @@ public class Course {
 
     private List<String> questions; // Simple learning/check questions
 
+    
+ // ✅ New field: course completion (global)
+    private boolean completed = false;
+
+
     // --- Constructors ---
     public Course() {
     }
@@ -27,6 +32,7 @@ public class Course {
         this.objective = objective;
         this.description = description;
         this.questions = questions;
+         this.completed = false; // default
     }
 
     // --- Getters & Setters ---
@@ -69,4 +75,13 @@ public class Course {
     public void setQuestions(List<String> questions) {
         this.questions = questions;
     }
+
+    
+    public boolean isCompleted() { 
+        return completed;
+     }
+    public void setCompleted(boolean completed) { 
+        this.completed = completed; 
+    }
+
 }
