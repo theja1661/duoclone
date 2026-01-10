@@ -3,7 +3,9 @@ package com.example.duoclone.controller;
 import java.util.List;
 import java.util.Map;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.server.ResponseStatusException;
 
 import com.example.duoclone.model.Course;
 import com.example.duoclone.model.UserProgress;
@@ -49,8 +51,13 @@ public class CourseController {
         progress.setCourseId(id);
         progress.setCompleted(true);
 
-        progressRepository.save(progress);
+        
+var course = courseRepository.findById(id)
+        .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Course not found"));
+    course.setCompleted(true);
+    courseRepository.save(course);
 
-        return "Course marked as completed";
+    return "Course marked as completed";
+
     }
 }
