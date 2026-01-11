@@ -1,0 +1,10 @@
+/* small sign-up tweaks; auth-card layout comes from App.css */
+.auth-card {
+  width: 420px;
+  max-width: 100%;
+}
+
+/* reduce spacing slightly on sign-up */
+.form-group {
+  margin-bottom: 14px;
+}

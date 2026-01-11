@@ -1,0 +1,144 @@
+:root {
+  /* color palette — orange theme */
+  --bg: #fff7ed;            /* light warm background */
+  --text: #3b2f2f;          /* dark warm text */
+  --primary: #fb923c;       /* orange (primary) */
+  --primary-dark: #ea580c;  /* darker orange */
+  --primary-opaque: rgba(251,146,60,0.12);
+  --primary-contrast: #ffffff;
+  --card-bg: #ffffff;
+  --muted: #fff1e6;
+  --border-color: rgba(0, 0, 0, 0.06);
+  --text-muted: #6b5b5b;
+  --text-secondary: #9a8a8a;
+
+  font-family: var(--app-font, 'DM Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif);
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--text);
+  background-color: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Dark theme colors */
+[data-theme="dark"] {
+  --bg: #1a1a1a;
+  --text: #e5e5e5;
+  --primary: #fb923c;
+  --primary-dark: #ea580c;
+  --primary-opaque: rgba(251,146,60,0.15);
+  --primary-contrast: #1a1a1a;
+  --card-bg: #262626;
+  --muted: #333333;
+  --border-color: rgba(255, 255, 255, 0.1);
+  --text-muted: #a3a3a3;
+  --text-secondary: #737373;
+}
+
+/* Smooth theme transition */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: var(--primary);
+  font-weight: 500;
+  text-decoration: inherit;
+}
+a:hover {
+  color: var(--primary-dark);
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: transform 0.12s;
+}
+button:hover {
+  transform: translateY(-1px);
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.error-message {
+  background: #fee2e2;
+  border: 1px solid #fca5a5;
+  color: #991b1b;
+  padding: 12px 14px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.loading-container {
+  text-align: center;
+  padding: 40px 20px;
+  font-size: 1.1rem;
+  color: var(--text);
+}
+
+.error-banner {
+  background: #fee2e2;
+  border: 1px solid #fca5a5;
+  color: #991b1b;
+  padding: 12px 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.no-courses {
+  text-align: center;
+  color: #6b5b5b;
+  padding: 20px;
+  grid-column: 1 / -1;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}

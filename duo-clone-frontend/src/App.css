@@ -1,0 +1,118 @@
+* {
+  box-sizing: border-box;
+}
+
+/* shared auth layout container (page-specific inner layout moved to SignIn.css) */
+.auth-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+/* shared auth card basics (per-page widths/anchoring moved out if needed) */
+.auth-card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(14, 44, 44, 0.06);
+  padding: 28px;
+}
+
+/* headings inside auth card */
+.auth-card h1 {
+  color: var(--text);
+  margin-bottom: 6px;
+  font-size: 1.8rem;
+}
+
+.auth-card p {
+  color: #666;
+  margin-bottom: 18px;
+}
+
+/* form groups (shared) */
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+  color: #333;
+  font-weight: 500;
+  margin-bottom: 8px;
+  text-align: left;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 2px solid #e6e6e6;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: border-color 0.18s;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: var(--primary-dark);
+}
+
+/* primary button (shared) */
+.btn-primary {
+  width: 100%;
+  padding: 12px 14px;
+  background: var(--primary);
+  color: var(--primary-contrast);
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.12s, box-shadow 0.12s;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(234,88,12,0.12);
+}
+
+.auth-footer {
+  margin-top: 16px;
+  text-align: center;
+  color: #666;
+}
+
+.auth-footer a {
+  color: var(--primary);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* Success & Error Messages */
+.error-message {
+  background-color: #fee2e2;
+  border: 1px solid #fecaca;
+  color: #dc2626;
+  padding: 12px 14px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+
+.success-message {
+  background-color: #dcfce7;
+  border: 1px solid #bbf7d0;
+  color: #16a34a;
+  padding: 12px 14px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+
+/* small responsive tweak (page-specific stacking handled in SignIn.css too) */
+@media (max-width: 880px) {
+  .auth-container {
+    padding: 20px;
+  }
+}

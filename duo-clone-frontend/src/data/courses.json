@@ -1,0 +1,68 @@
+{
+  "courses": [
+    {
+      "id": 1,
+      "name": "Java Programming",
+      "icon": "☕",
+      "description": "Master object-oriented programming with Java",
+      "progress": 65,
+      "isActive": true
+    },
+    {
+      "id": 2,
+      "name": "Python Basics",
+      "icon": "🐍",
+      "description": "Learn Python from scratch to advanced",
+      "progress": 40,
+      "isActive": true
+    },
+    {
+      "id": 3,
+      "name": "JavaScript",
+      "icon": "⚡",
+      "description": "Build interactive web applications",
+      "progress": 0,
+      "isActive": false
+    },
+    {
+      "id": 4,
+      "name": "C++ Fundamentals",
+      "icon": "⚙️",
+      "description": "Deep dive into systems programming",
+      "progress": 0,
+      "isActive": false
+    },
+    {
+      "id": 5,
+      "name": "SQL Databases",
+      "icon": "🗄️",
+      "description": "Query and manage relational databases",
+      "progress": 0,
+      "isActive": false
+    },
+    {
+      "id": 6,
+      "name": "Data Structures",
+      "icon": "🌳",
+      "description": "Essential algorithms and data structures",
+      "progress": 0,
+      "isActive": false
+    },
+    {
+      "id": 7,
+      "name": "React Framework",
+      "icon": "⚛️",
+      "description": "Build modern user interfaces",
+      "progress": 0,
+      "isActive": false
+    },
+    {
+      "id": 8,
+      "name": "Node.js Backend",
+      "icon": "🟢",
+      "description": "Server-side JavaScript development",
+      "progress": 0,
+      "isActive": false
+    }
+  ]
+}

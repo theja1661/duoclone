@@ -1,0 +1,58 @@
+.auth-inner {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+  max-width: 1100px;
+}
+
+/* left splash area (description + svg) */
+.auth-splash {
+  flex: 1;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  justify-content: center;
+  color: var(--text);
+}
+
+.auth-splash .splash-svg {
+  width: 120px;
+  height: 120px;
+  display: block;
+  border-radius: 12px;
+  background: var(--muted);
+  padding: 14px;
+  box-shadow: 0 8px 30px rgba(14, 44, 44, 0.04);
+}
+
+.auth-splash h2 {
+  margin: 0;
+  font-size: 1.45rem;
+  color: var(--text);
+}
+
+.auth-splash p {
+  margin: 0;
+  color: #5a4b4b;
+  max-width: 44ch;
+  line-height: 1.45;
+}
+
+/* anchor the auth-card to a consistent width on sign-in page */
+.auth-card {
+  width: 420px;
+}
+
+/* responsive: stack splash above card on small screens */
+@media (max-width: 880px) {
+  .auth-inner {
+    flex-direction: column;
+    gap: 18px;
+  }
+  .auth-card {
+    width: 100%;
+    max-width: 520px;
+  }
+}
