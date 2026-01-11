@@ -1,6 +1,6 @@
 package com.example.duoclone.model;
 
-import jakarta.persistence.Id;
+import org.springframework.data.annotation.Id;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -24,6 +24,4 @@ public class GameQuestion {
     private List<String> options;
     private String correctAnswer;
     private int difficulty;
-
-
 }

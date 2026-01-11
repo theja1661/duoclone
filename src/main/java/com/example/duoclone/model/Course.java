@@ -1,87 +1,67 @@
-
 package com.example.duoclone.model;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.List;
 
 @Document(collection = "courses")
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Course {
 
     @Id
     private String id;
 
-    private String name;            // Java, Python, Spring Boot
-    private String objective;       // What learner will achieve
-    private String description;     // Course overview
-
-    private List<String> questions; // Simple learning/check questions
-
+    private String name;
+    private String description;
+    private String fullDescription;
+    private List<String> curriculum;
+    private Integer progress;
+    private String level;
+    private String duration;
+    private Integer totalLessons;
+    private Integer totalExercises;
+    private Integer likeCount = 0; // Track number of likes
     
- // ✅ New field: course completion (global)
-    private boolean completed = false;
+    // New fields for detailed course content
+    private List<TechnicalContent> technicalContent;
+    private List<MCQuestion> mcqQuestions;
 
-
-    // --- Constructors ---
-    public Course() {
+    // Nested classes for structured data
+    @Data
+    @NoArgsConstructor
+    @AllArgsConstructor
+    public static class TechnicalContent {
+        private String title;
+        private String content;
+        private String codeExample;
+        private String language; // e.g., "java", "python", "javascript"
     }
 
-    public Course(String name, String objective, String description, List<String> questions) {
+    @Data
+    @NoArgsConstructor
+    @AllArgsConstructor
+    public static class MCQuestion {
+        private String question;
+        private List<String> options;
+        private int correctAnswerIndex; // 0-based index
+        private String explanation;
+    }
+
+    public Course(String name, String description, String fullDescription, List<String> curriculum) {
         this.name = name;
-        this.objective = objective;
         this.description = description;
-        this.questions = questions;
-         this.completed = false; // default
+        this.fullDescription = fullDescription;
+        this.curriculum = curriculum;
+        this.progress = 0;
+        this.level = "Beginner to Advanced";
+        this.duration = "~8 hours";
+        this.totalLessons = 20;
+        this.totalExercises = 50;
     }
-
-    // --- Getters & Setters ---
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getObjective() {
-        return objective;
-    }
-
-    public void setObjective(String objective) {
-        this.objective = objective;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public List<String> getQuestions() {
-        return questions;
-    }
-
-    public void setQuestions(List<String> questions) {
-        this.questions = questions;
-    }
-
-    
-    public boolean isCompleted() { 
-        return completed;
-     }
-    public void setCompleted(boolean completed) { 
-        this.completed = completed; 
-    }
-
 }
