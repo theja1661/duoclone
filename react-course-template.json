@@ -1,0 +1,185 @@
+{
+  "name": "React for Beginners",
+  "description": "Learn the fundamentals of React and start building modern user interfaces",
+  "fullDescription": "This beginner-friendly React course introduces you to the core concepts needed to build interactive web applications. You’ll learn how React works, how to create and reuse components, manage state and props, handle events, and build simple applications using modern React practices. No prior React experience is required, but basic JavaScript knowledge is recommended.",
+  "level": "Beginner",
+  "duration": "~10 hours",
+  "totalLessons": 20,
+  "totalExercises": 40,
+  "curriculum": [
+    "Introduction to React and JSX",
+    "Setting Up a React Project",
+    "Components and Props",
+    "State and Event Handling",
+    "Conditional Rendering",
+    "Lists and Keys",
+    "Forms and Controlled Components",
+    "Basic Hooks (useState, useEffect)",
+    "Component Lifecycle Basics",
+    "Project Structure and Best Practices"
+  ],
+  "technicalContent": [
+    {
+      "title": "What is React?",
+      "content": "React is a JavaScript library for building user interfaces, primarily for single-page applications. It allows developers to create reusable UI components and efficiently update the UI when data changes using a virtual DOM."
+    },
+    {
+      "title": "Understanding JSX",
+      "content": "JSX is a syntax extension for JavaScript that allows you to write HTML-like code inside JavaScript. It makes React components easier to read and write, while still being transformed into regular JavaScript under the hood."
+    },
+    {
+      "title": "Creating Your First React Component",
+      "content": "Components are the building blocks of React applications. A component can be a function that returns JSX describing what should appear on the screen.",
+      "codeExample": "function Hello() {\n  return <h1>Hello, React!</h1>;\n}\n\nexport default Hello;",
+      "language": "javascript"
+    },
+    {
+      "title": "Props in React",
+      "content": "Props (short for properties) are used to pass data from a parent component to a child component. They make components reusable and dynamic."
+    },
+    {
+      "title": "Using State with useState Hook",
+      "content": "State allows components to manage and store data that can change over time. The useState hook is the most common way to add state to functional components.",
+      "codeExample": "import { useState } from 'react';\n\nfunction Counter() {\n  const [count, setCount] = useState(0);\n\n  return (\n    <div>\n      <p>Count: {count}</p>\n      <button onClick={() => setCount(count + 1)}>Increment</button>\n    </div>\n  );\n}\n\nexport default Counter;",
+      "language": "javascript"
+    },
+    {
+      "title": "Handling Events in React",
+      "content": "React handles events similarly to DOM events but uses camelCase syntax. Event handlers are passed as functions and allow you to respond to user actions."
+    },
+    {
+      "title": "Rendering Lists in React",
+      "content": "You can render lists in React by using JavaScript’s map() method. Each item in a list should have a unique key to help React optimize rendering.",
+      "codeExample": "function ListExample() {\n  const items = ['Apple', 'Banana', 'Orange'];\n\n  return (\n    <ul>\n      {items.map((item, index) => (\n        <li key={index}>{item}</li>\n      ))}\n    </ul>\n  );\n}\n\nexport default ListExample;",
+      "language": "javascript"
+    },
+    {
+      "title": "Conditional Rendering",
+      "content": "Conditional rendering allows you to display different UI elements based on certain conditions. This can be done using if statements, ternary operators, or logical && operators."
+    },
+    {
+      "title": "Controlled Components and Forms",
+      "content": "In controlled components, form data is handled by React state. This gives you full control over form inputs and makes validation easier.",
+      "codeExample": "import { useState } from 'react';\n\nfunction LoginForm() {\n  const [username, setUsername] = useState('');\n\n  return (\n    <input\n      type=\"text\"\n      value={username}\n      onChange={(e) => setUsername(e.target.value)}\n    />\n  );\n}\n\nexport default LoginForm;",
+      "language": "javascript"
+    },
+    {
+      "title": "Introduction to useEffect",
+      "content": "The useEffect hook lets you perform side effects in functional components, such as fetching data, updating the DOM, or setting up subscriptions.",
+      "codeExample": "import { useEffect } from 'react';\n\nfunction EffectExample() {\n  useEffect(() => {\n    console.log('Component mounted');\n  }, []);\n\n  return <div>Check the console</div>;\n}\n\nexport default EffectExample;",
+      "language": "javascript"
+    }
+  ],
+  "mcqQuestions": [
+    {
+      "question": "What is React primarily used for?",
+      "options": [
+        "Database management",
+        "Building user interfaces",
+        "Server-side scripting",
+        "Operating system development"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "React is a JavaScript library used to build user interfaces, especially for single-page applications."
+    },
+    {
+      "question": "What does JSX stand for?",
+      "options": [
+        "JavaScript XML",
+        "Java Syntax Extension",
+        "JSON XML",
+        "JavaScript XHTML"
+      ],
+      "correctAnswerIndex": 0,
+      "explanation": "JSX stands for JavaScript XML and allows writing HTML-like syntax in JavaScript."
+    },
+    {
+      "question": "Which hook is used to manage state in a functional component?",
+      "options": [
+        "useEffect",
+        "useState",
+        "useContext",
+        "useRef"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "useState is the React hook used to add state to functional components."
+    },
+    {
+      "question": "How do you pass data to a component in React?",
+      "options": [
+        "Using state",
+        "Using props",
+        "Using hooks",
+        "Using events"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "Props are used to pass data from parent components to child components."
+    },
+    {
+      "question": "What must be added to list items rendered using map()?",
+      "options": [
+        "id attribute",
+        "className",
+        "key",
+        "indexName"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "Each list item needs a unique key to help React identify elements efficiently."
+    },
+    {
+      "question": "Which syntax is used for event handlers in React?",
+      "options": [
+        "onclick",
+        "on_click",
+        "onClick",
+        "click"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "React uses camelCase syntax for event handlers, such as onClick."
+    },
+    {
+      "question": "What does the useEffect hook handle?",
+      "options": [
+        "State management",
+        "Side effects",
+        "Routing",
+        "Styling"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "useEffect is used to handle side effects like data fetching and subscriptions."
+    },
+    {
+      "question": "Which of the following is a controlled component?",
+      "options": [
+        "An input managed by the DOM",
+        "An input managed by React state",
+        "A stateless component",
+        "A class component only"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "A controlled component is one whose value is controlled by React state."
+    },
+    {
+      "question": "What is the virtual DOM?",
+      "options": [
+        "A copy of the real DOM stored in memory",
+        "A database for components",
+        "A browser API",
+        "A CSS framework"
+      ],
+      "correctAnswerIndex": 0,
+      "explanation": "The virtual DOM is a lightweight in-memory representation of the real DOM used by React for efficient updates."
+    },
+    {
+      "question": "Which command is commonly used to create a new React app?",
+      "options": [
+        "npm start react",
+        "npm create-react-app",
+        "npx create-react-app",
+        "react new app"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "npx create-react-app is commonly used to quickly set up a new React project."
+    }
+  ]
+}
