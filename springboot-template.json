@@ -1,0 +1,183 @@
+{
+  "name": "Spring Boot Quickstart",
+  "description": "Get started with Spring Boot and build production-ready Java applications quickly",
+  "fullDescription": "This Spring Boot Quickstart course is designed for beginners who want to build Java-based backend applications with minimal configuration. You’ll learn the fundamentals of Spring Boot, understand how auto-configuration works, create REST APIs, connect to databases, and structure real-world applications. The course focuses on practical concepts with clear explanations, making it ideal for Java developers new to Spring Boot.",
+  "level": "Beginner",
+  "duration": "~9 hours",
+  "totalLessons": 18,
+  "totalExercises": 35,
+  "curriculum": [
+    "Introduction to Spring Boot",
+    "Spring Boot Project Setup",
+    "Understanding Auto Configuration",
+    "Spring Boot Application Structure",
+    "Building REST APIs",
+    "Dependency Injection Basics",
+    "Working with Controllers and Services",
+    "Database Connectivity with JPA",
+    "Configuration and Properties",
+    "Exception Handling and Logging"
+  ],
+  "technicalContent": [
+    {
+      "title": "What is Spring Boot?",
+      "content": "Spring Boot is a framework built on top of the Spring ecosystem that simplifies the development of Java applications. It eliminates boilerplate configuration by providing sensible defaults, embedded servers, and opinionated setup. This allows developers to focus more on business logic rather than infrastructure and configuration."
+    },
+    {
+      "title": "Why Use Spring Boot?",
+      "content": "Spring Boot helps developers create stand-alone, production-ready applications quickly. It provides embedded servers like Tomcat, automatic dependency management, and seamless integration with databases and cloud platforms. These features make it ideal for microservices and modern backend development."
+    },
+    {
+      "title": "Creating a Spring Boot Application",
+      "content": "A Spring Boot application starts with a main class annotated with @SpringBootApplication. This annotation enables auto-configuration, component scanning, and configuration support.",
+      "codeExample": "import org.springframework.boot.SpringApplication;\nimport org.springframework.boot.autoconfigure.SpringBootApplication;\n\n@SpringBootApplication\npublic class DemoApplication {\n    public static void main(String[] args) {\n        SpringApplication.run(DemoApplication.class, args);\n    }\n}",
+      "language": "java"
+    },
+    {
+      "title": "Understanding Auto Configuration",
+      "content": "Auto-configuration is one of Spring Boot’s most powerful features. Based on the dependencies present in the project, Spring Boot automatically configures beans and application settings. This reduces manual configuration and speeds up development while still allowing customization when needed."
+    },
+    {
+      "title": "Spring Boot Project Structure",
+      "content": "A typical Spring Boot project follows a layered structure with packages such as controller, service, repository, and model. This structure improves maintainability, readability, and scalability by separating concerns and responsibilities within the application."
+    },
+    {
+      "title": "Building a REST Controller",
+      "content": "Spring Boot makes it easy to build RESTful APIs using annotations like @RestController and @GetMapping. Controllers handle HTTP requests and return responses in JSON or other formats.",
+      "codeExample": "import org.springframework.web.bind.annotation.GetMapping;\nimport org.springframework.web.bind.annotation.RestController;\n\n@RestController\npublic class HelloController {\n\n    @GetMapping(\"/hello\")\n    public String hello() {\n        return \"Hello, Spring Boot!\";\n    }\n}",
+      "language": "java"
+    },
+    {
+      "title": "Dependency Injection in Spring Boot",
+      "content": "Dependency Injection (DI) allows Spring to manage object creation and dependencies automatically. By using annotations like @Component, @Service, and @Autowired, you can create loosely coupled and testable code."
+    },
+    {
+      "title": "Service Layer in Spring Boot",
+      "content": "The service layer contains business logic and acts as an intermediary between controllers and repositories. It helps keep controllers lightweight and promotes clean architecture.",
+      "codeExample": "import org.springframework.stereotype.Service;\n\n@Service\npublic class GreetingService {\n    public String greet() {\n        return \"Welcome to Spring Boot\";\n    }\n}",
+      "language": "java"
+    },
+    {
+      "title": "Database Integration with Spring Data JPA",
+      "content": "Spring Data JPA simplifies database access by reducing boilerplate code. You can define repository interfaces, and Spring automatically provides implementations for common CRUD operations.",
+      "codeExample": "import org.springframework.data.jpa.repository.JpaRepository;\n\npublic interface UserRepository extends JpaRepository<User, Long> {\n}",
+      "language": "java"
+    },
+    {
+      "title": "Application Properties and Configuration",
+      "content": "Spring Boot uses application.properties or application.yml files to manage configuration such as server ports, database credentials, and logging levels. Externalized configuration makes applications easier to manage across different environments."
+    }
+  ],
+  "mcqQuestions": [
+    {
+      "question": "What is Spring Boot mainly used for?",
+      "options": [
+        "Frontend development",
+        "Building stand-alone Java applications",
+        "Database design",
+        "Operating system development"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "Spring Boot is used to build stand-alone, production-ready Java applications with minimal configuration."
+    },
+    {
+      "question": "Which annotation is used to mark the main Spring Boot application class?",
+      "options": [
+        "@EnableSpring",
+        "@SpringBootApp",
+        "@SpringBootApplication",
+        "@BootApplication"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "@SpringBootApplication enables auto-configuration, component scanning, and configuration support."
+    },
+    {
+      "question": "What is auto-configuration in Spring Boot?",
+      "options": [
+        "Manual bean configuration",
+        "Automatic setup based on dependencies",
+        "Database auto backup",
+        "Automatic code generation"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "Auto-configuration automatically configures beans and settings based on the dependencies present in the project."
+    },
+    {
+      "question": "Which annotation is used to create REST APIs in Spring Boot?",
+      "options": [
+        "@Controller",
+        "@Service",
+        "@RestController",
+        "@Repository"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "@RestController is used to create RESTful web services that return JSON responses."
+    },
+    {
+      "question": "Which embedded server is commonly used by Spring Boot?",
+      "options": [
+        "Apache HTTP Server",
+        "Nginx",
+        "Tomcat",
+        "GlassFish only"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "Spring Boot uses Tomcat as the default embedded server, though others can be configured."
+    },
+    {
+      "question": "What does dependency injection help achieve?",
+      "options": [
+        "Tight coupling",
+        "Better performance only",
+        "Loose coupling and testability",
+        "Database optimization"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "Dependency injection promotes loose coupling and makes applications easier to test and maintain."
+    },
+    {
+      "question": "Which file is commonly used for configuration in Spring Boot?",
+      "options": [
+        "config.xml",
+        "spring.json",
+        "application.properties",
+        "boot.config"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "Spring Boot uses application.properties or application.yml for configuration."
+    },
+    {
+      "question": "What is the role of the service layer?",
+      "options": [
+        "Handle HTTP requests only",
+        "Contain business logic",
+        "Manage database connections",
+        "Render UI pages"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "The service layer contains business logic and keeps controllers lightweight."
+    },
+    {
+      "question": "Which Spring Boot module simplifies database operations?",
+      "options": [
+        "Spring MVC",
+        "Spring Core",
+        "Spring Data JPA",
+        "Spring Security"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "Spring Data JPA reduces boilerplate code for database access and CRUD operations."
+    },
+    {
+      "question": "What is a key advantage of Spring Boot?",
+      "options": [
+        "Requires extensive XML configuration",
+        "No support for REST APIs",
+        "Faster development with minimal setup",
+        "Frontend-only framework"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "Spring Boot speeds up development by providing defaults, auto-configuration, and embedded servers."
+    }
+  ]
+}

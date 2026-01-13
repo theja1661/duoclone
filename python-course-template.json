@@ -1,0 +1,187 @@
+{
+  "name": "Python Fundamentals",
+  "description": "Learn the core concepts of Python programming from scratch",
+  "fullDescription": "This Python Fundamentals course is designed for absolute beginners who want to learn programming using Python. The course covers essential concepts such as variables, data types, control flow, functions, collections, and basic file handling. With clear explanations and commented code examples, learners will gain a strong foundation to move into advanced Python topics like web development, data science, or automation.",
+  "level": "Beginner",
+  "duration": "~8 hours",
+  "totalLessons": 18,
+  "totalExercises": 45,
+  "curriculum": [
+    "Introduction to Python",
+    "Installing Python and Running Scripts",
+    "Variables and Data Types",
+    "Operators and Expressions",
+    "Conditional Statements",
+    "Loops in Python",
+    "Functions and Scope",
+    "Lists, Tuples, and Dictionaries",
+    "Working with Strings",
+    "Basic File Handling"
+  ],
+  "technicalContent": [
+    {
+      "title": "What is Python?",
+      "content": "Python is a high-level, interpreted programming language known for its simplicity and readability. It uses clear syntax and English-like keywords, making it an excellent choice for beginners. Python is widely used in web development, data science, automation, artificial intelligence, and many other fields."
+    },
+    {
+      "title": "Python Variables and Data Types",
+      "content": "Variables in Python are used to store data values. Python is dynamically typed, meaning you don’t need to specify the data type explicitly. Common data types include integers, floats, strings, and booleans."
+    },
+    {
+      "title": "Writing Your First Python Program",
+      "content": "A Python program can be as simple as a single line of code. The print() function is used to display output on the screen.",
+      "codeExample": "# This is a simple Python program\n# The print function displays text on the screen\nprint(\"Hello, Python!\")",
+      "language": "python"
+    },
+    {
+      "title": "Conditional Statements (if, elif, else)",
+      "content": "Conditional statements allow your program to make decisions based on conditions. Python uses indentation instead of braces to define code blocks.",
+      "codeExample": "# Assign a value to a variable\nage = 18\n\n# Check conditions using if-elif-else\nif age < 18:\n    print(\"You are a minor\")\nelif age == 18:\n    print(\"You just became an adult\")\nelse:\n    print(\"You are an adult\")",
+      "language": "python"
+    },
+    {
+      "title": "Loops in Python",
+      "content": "Loops allow you to repeat a block of code multiple times. Python mainly provides for loops and while loops, which are commonly used for iteration."
+    },
+    {
+      "title": "Using for Loops",
+      "content": "The for loop is commonly used to iterate over sequences like lists, strings, or ranges.",
+      "codeExample": "# Loop through a range of numbers\nfor i in range(1, 6):\n    # Print the current number\n    print(\"Number:\", i)",
+      "language": "python"
+    },
+    {
+      "title": "Functions in Python",
+      "content": "Functions are reusable blocks of code that perform a specific task. They help make programs modular and easier to understand.",
+      "codeExample": "# Define a function that adds two numbers\ndef add_numbers(a, b):\n    # Return the sum of a and b\n    return a + b\n\n# Call the function and store the result\nresult = add_numbers(5, 3)\nprint(\"Sum:\", result)",
+      "language": "python"
+    },
+    {
+      "title": "Python Lists",
+      "content": "Lists are ordered, mutable collections used to store multiple items in a single variable. They are one of the most commonly used data structures in Python."
+    },
+    {
+      "title": "Dictionaries in Python",
+      "content": "Dictionaries store data in key-value pairs. They are useful when you want to associate values with unique keys.",
+      "codeExample": "# Create a dictionary to store user data\nuser = {\n    \"name\": \"Alice\",\n    \"age\": 25,\n    \"is_active\": True\n}\n\n# Access dictionary values using keys\nprint(\"Name:\", user[\"name\"])\nprint(\"Age:\", user[\"age\"])",
+      "language": "python"
+    },
+    {
+      "title": "Basic File Handling",
+      "content": "Python allows you to read from and write to files easily. File handling is commonly used for logging, configuration, and data storage.",
+      "codeExample": "# Open a file in write mode\nwith open(\"example.txt\", \"w\") as file:\n    # Write text to the file\n    file.write(\"Hello, file handling in Python\")\n\n# Open the file in read mode\nwith open(\"example.txt\", \"r\") as file:\n    # Read and print file content\n    content = file.read()\n    print(content)",
+      "language": "python"
+    }
+  ],
+  "mcqQuestions": [
+    {
+      "question": "What type of programming language is Python?",
+      "options": [
+        "Low-level compiled language",
+        "High-level interpreted language",
+        "Assembly language",
+        "Markup language"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "Python is a high-level, interpreted language designed for readability and ease of use."
+    },
+    {
+      "question": "Which symbol is used to write comments in Python?",
+      "options": [
+        "//",
+        "/* */",
+        "#",
+        "<!-- -->"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "The # symbol is used to write single-line comments in Python."
+    },
+    {
+      "question": "Which data type is used to store text in Python?",
+      "options": [
+        "int",
+        "float",
+        "str",
+        "bool"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "The str data type is used to store text in Python."
+    },
+    {
+      "question": "How does Python define code blocks?",
+      "options": [
+        "Using curly braces",
+        "Using parentheses",
+        "Using indentation",
+        "Using semicolons"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "Python uses indentation to define code blocks instead of braces."
+    },
+    {
+      "question": "Which loop is commonly used to iterate over a sequence?",
+      "options": [
+        "do-while loop",
+        "for loop",
+        "repeat loop",
+        "foreach keyword only"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "The for loop is commonly used to iterate over sequences like lists and ranges."
+    },
+    {
+      "question": "What keyword is used to define a function in Python?",
+      "options": [
+        "function",
+        "def",
+        "func",
+        "define"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "The def keyword is used to define a function in Python."
+    },
+    {
+      "question": "Which data structure stores key-value pairs?",
+      "options": [
+        "List",
+        "Tuple",
+        "Set",
+        "Dictionary"
+      ],
+      "correctAnswerIndex": 3,
+      "explanation": "Dictionaries store data as key-value pairs."
+    },
+    {
+      "question": "Are Python lists mutable?",
+      "options": [
+        "Yes",
+        "No",
+        "Only tuples are mutable",
+        "Only strings are mutable"
+      ],
+      "correctAnswerIndex": 0,
+      "explanation": "Lists are mutable, meaning their contents can be changed after creation."
+    },
+    {
+      "question": "Which function is used to display output in Python?",
+      "options": [
+        "echo()",
+        "write()",
+        "print()",
+        "show()"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "The print() function is used to display output on the screen."
+    },
+    {
+      "question": "Which mode is used to read a file in Python?",
+      "options": [
+        "w",
+        "a",
+        "r",
+        "x"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "The 'r' mode is used to read a file in Python."
+    }
+  ]
+}
